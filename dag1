@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from dags.operator import ReportPodOperator
+from airflow-dags.operator import ReportPodOperator
 import time
 from airflow.utils.dates import days_ago
 
