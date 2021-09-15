@@ -33,7 +33,7 @@ t1 = KubernetesPodOperator(
     dag=dag,
     name='test1',
     task_id='task1test',
-    args=['/reporting_sys/scripts/premiumSubs.py'],
+    args=['premiumSubs.py'],
     cmds=cmd,
     is_delete_operator_pod=True
 )
