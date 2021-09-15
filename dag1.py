@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from operator import ReportPodOperator
-# /opt/airflow/dags/repo/
+# from operator import ReportPodOperator
+from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOperator
 import time
 from airflow.utils.dates import days_ago
 
@@ -29,7 +29,7 @@ dag = DAG(
 
 cmd = ['python']
 
-t1 = ReportPodOperator(
+t1 = KubernetesPodOperator(
     dag=dag,
     name='test1',
     task_id='task1test',
